@@ -45,5 +45,5 @@ public interface CategoryService {
      * 前台目录列表
      * @return
      */
-    List<CategoryVO> listCategoryForCustomer();
+    List<CategoryVO> listCategoryForCustomer(Integer parentId);
 }

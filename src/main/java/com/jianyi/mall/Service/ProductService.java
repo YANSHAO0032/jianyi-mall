@@ -1,7 +1,9 @@
 package com.jianyi.mall.Service;
 
+import com.github.pagehelper.PageInfo;
 import com.jianyi.mall.model.pojo.Product;
 import com.jianyi.mall.model.request.AddProductReq;
+import com.jianyi.mall.model.request.ProductListReq;
 
 /**
  * @Author: YANSHAO
@@ -29,4 +31,34 @@ public interface ProductService {
      * @param id
      */
     void delete(Integer id);
+
+    /**
+     * 后台批量上下架
+     * @param ids
+     * @param sellStatus
+     */
+    void batchUpdateSellStatus(Integer[] ids, Integer sellStatus);
+
+
+    /**
+     * 后台商品列表
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    PageInfo listForAdmin(Integer pageNum, Integer pageSize);
+
+    /**
+     * 商品详情
+     * @param id
+     * @return
+     */
+    Product detail(Integer id);
+
+    /**
+     * 商品列表
+     * @param productListReq
+     * @return
+     */
+    PageInfo list(ProductListReq productListReq);
 }
