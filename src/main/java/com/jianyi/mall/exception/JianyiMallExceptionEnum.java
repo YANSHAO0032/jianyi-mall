@@ -19,11 +19,16 @@ public enum JianyiMallExceptionEnum {
     PARA_NOT_NULL(10010, "参数不能为空"),
     CREATE_FAILD(10011, "新增失败"),
     REQUEST_PARAM_ERROR(10012, "参数错误"),
-    DELETE_FALED(10013,"删除失败"),
-    MKDIR_FALED(10014, "文件夹创建失败"),
-    UPLOAD_FALED(10015, "图片上传失败"),
+    DELETE_FAILED(10013,"删除失败"),
+    MKDIR_FAILED(10014, "文件夹创建失败"),
+    UPLOAD_FAILED(10015, "图片上传失败"),
     NOT_SALE(10016, "商品不可售"),
     NOT_ENOUGH(10017, "商品库存不足"),
+    CART_EMPTY(10018, "购物车已勾选的商品为空"),
+    NO_ENUM(10019, "未找到对应的枚举类"),
+    NO_ORDER(10020, "订单不存在"),
+    NOT_YOUR_ORDER(10021, "订单不属于你"),
+    WRONG_ORDER_STATUS(10022, "订单状态不符"),
     SYSTEM_ERROR(20000, "系统异常");
 
     /**

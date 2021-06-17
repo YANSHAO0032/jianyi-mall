@@ -68,11 +68,11 @@ public class ProductServiceIml implements ProductService {
         Product productOld = productMapper.selectByPrimaryKey(id);
         //查不到该记录，无法删除
         if (productOld == null) {
-            throw new JianyiMallException(JianyiMallExceptionEnum.DELETE_FALED);
+            throw new JianyiMallException(JianyiMallExceptionEnum.DELETE_FAILED);
         }
         int count = productMapper.deleteByPrimaryKey(id);
         if (count == 0) {
-            throw new JianyiMallException(JianyiMallExceptionEnum.DELETE_FALED);
+            throw new JianyiMallException(JianyiMallExceptionEnum.DELETE_FAILED);
         }
     }
 

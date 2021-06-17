@@ -103,7 +103,7 @@ public class CartServiceIml implements CartService {
         Cart cart = cartMapper.selectCartByUserIdAndProductId(userId, productId);
         if (cart == null) {
             //这个商品不在购物车内，无法更新
-            throw new JianyiMallException(JianyiMallExceptionEnum.DELETE_FALED);
+            throw new JianyiMallException(JianyiMallExceptionEnum.DELETE_FAILED);
         } else {
             //已经在购物车里，则可以删除
             cartMapper.deleteByPrimaryKey(cart.getId());

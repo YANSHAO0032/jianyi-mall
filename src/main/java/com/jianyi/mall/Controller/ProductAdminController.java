@@ -56,7 +56,7 @@ public class ProductAdminController {
         File destFile = new File(Constant.FILE_UPLOAD_DIR + newFileName);
         if (!fileDirectory.exists()) {
             if (!fileDirectory.mkdir()) {
-                throw new JianyiMallException(JianyiMallExceptionEnum.MKDIR_FALED);
+                throw new JianyiMallException(JianyiMallExceptionEnum.MKDIR_FAILED);
             }
         }
         try {
@@ -67,7 +67,7 @@ public class ProductAdminController {
         try {
             return ApiRestResponse.success(getHost(new URI(httpServletRequest.getRequestURL()+"")) + "/images/" + newFileName);
         } catch (URISyntaxException e) {
-            return ApiRestResponse.error(JianyiMallExceptionEnum.UPLOAD_FALED);
+            return ApiRestResponse.error(JianyiMallExceptionEnum.UPLOAD_FAILED);
         }
 
     }
